@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="اکتای آل احمدی — oktayphp | برنامه‌نویس Full-Stack وب. نمونه کارها، مهارت‌ها و راه‌های تماس." />
+  <meta name="keywords" content="اکتای, oktayphp, برنامه‌نویس, Full-Stack, Laravel, PHP, JavaScript, Python" />
+  <title>اکتای آل احمدی — oktayphp</title>
+
+  <!-- فونت فارسی -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap&subset=arabic" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#0f1724" />
+</head>
+<body class="light">
+
+  <!-- SVG sprite داخلی: آیکون‌ها -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <!-- mail -->
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 6.5h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-11z"/>
+      <path d="M21 6.5l-9 7-9-7"/>
+    </symbol>
+
+    <!-- phone -->
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.63A2 2 0 0 1 4.09 2h3a2 2 0 0 1 2 1.72c.12 1.21.4 2.4.84 3.52a2 2 0 0 1-.45 2.11L8.91 10.09a14.66 14.66 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c1.12.44 2.31.72 3.52.84A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+
+    <!-- chevron (ناوبری) -->
+    <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18l6-6-6-6"/>
+    </symbol>
+
+    <!-- instagram -->
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+      <path d="M16.5 7.5h.01"></path>
+      <path d="M12 8.5a3.5 3.5 0 1 0 .001 7.001A3.5 3.5 0 0 0 12 8.5z"></path>
+    </symbol>
+
+    <!-- telegram -->
+    <symbol id="icon-telegram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 2L11 13"></path>
+      <path d="M22 2l-6 20-4-9-9-4L22 2z"></path>
+    </symbol>
+
+    <!-- external -->
+    <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h6"/>
+      <path d="M15 3h6v6"/>
+      <path d="M10 14L21 3"/>
+    </symbol>
+
+    <!-- github -->
+    <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 19c-5 1.5-5-2-7-2"/>
+      <path d="M20 14.5a2 2 0 0 0-.5-1.5c1.6-1.8.8-3.6.4-4.1-1.3-1.5-4.3-.9-4.3-.9s-.6-1.6-2.1-1.6c-1.5 0-2.1 1.6-2.1 1.6s-3-0.6-4.3.9c-.4.5-1.2 2.3.4 4.1A2 2 0 0 0 4 14.5C4 18 7 19.5 9 20"/>
+    </symbol>
+  </svg>
+
+  <!-- نِویگیشن ثابت -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#hero">
+        <img src="assets/images/logo.svg" alt="oktayphp" class="logo">
+        <span class="brand-name">oktayphp</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="منو اصلی">
+        <a href="#about">درباره من</a>
+        <a href="#skills">مهارت‌ها</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#learning">مسیر یادگیری</a>
+        <a href="#contact">تماس</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button id="themeToggle" class="btn-ghost" aria-label="تغییر حالت">🌙</button>
+
+        <button id="hamburger" class="hamburger" aria-label="باز کردن منو" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- بخش هِیرو -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1 class="reveal">اکتای آل احمدی</h1>
+        <h2 class="sub reveal">برنامه‌نویس Full-Stack وب — <span class="nickname">oktayphp</span></h2>
+
+        <p class="intro reveal">
+          سلام! من اکتای هستم، ۱۵ ساله و عاشق ساختن وب‌سایت‌های سریع، واکنش‌گرا و با تجربه کاربری بالا.
+          تمرکزم روی بک‌اند و فرانت‌اند هست و با PHP، Laravel، JavaScript و Python کار می‌کنم.
+        </p>
+
+        <p class="typing reveal">مهارت‌ها: <span id="typeText"></span><span class="cursor">|</span></p>
+
+        <div class="hero-ctas reveal">
+          <a href="#projects" class="btn">پروژه‌ها</a>
+          <a href="#contact" class="btn btn-outline">تماس</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="card-profile">
+          <img src="assets/images/profile.jpg" alt="اکتای آل احمدی — oktayphp" class="profile-img">
+          <div class="profile-meta">
+            <h3>اکتای آل احمدی</h3>
+            <p>۱۵ سال — برنامه‌نویس Full-Stack Web</p>
+            <div class="contact-mini">
+              <a href="mailto:ir.oktay.a@gmail.com"><svg class="icon"><use href="#icon-mail"></use></svg>ir.oktay.a@gmail.com</a>
+              <a href="tel:+989934175939"><svg class="icon"><use href="#icon-phone"></use></svg>09934175939</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- درباره من -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>درباره من</h2>
+        <p>کمی از مسیر من، علاقه‌ها و آنچه به سمتش حرکت می‌کنم</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h3>خلاصه‌ای دربارهٔ من</h3>
+          <p>
+            من اکتای (oktayphp) هستم؛ از سنین کم برنامه‌نویسی را آغاز کردم و مسیرم را روی وب گذاشته‌ام.
+            تجربهٔ کار با HTML، CSS، JavaScript، PHP و فریم‌ورک Laravel را دارم و در حال گسترش مهارت‌هایم
+            با Python و ورود به دنیای Java و C++ هستم. هدفم ساخت سرویس‌های قابل‌اعتماد، سریع و زیباست.
+          </p>
+
+          <ul class="about-list">
+            <li><strong>نام کامل:</strong> اکتای آل احمدی</li>
+            <li><strong>لقب حرفه‌ای:</strong> oktayphp</li>
+            <li><strong>سن:</strong> ۱۵ سال</li>
+            <li><strong>تولد:</strong> ۱۳۸۹/۰۱/۱۰</li>
+            <li><strong>حرفه:</strong> برنامه‌نویس Full-Stack Web</li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- مهارت‌ها -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>مهارت‌ها</h2>
+        <p>مهارت‌هایم در Front-end و Back-end</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3>Front-end</h3>
+          <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3 / Responsive</li>
+            <li>JavaScript (Vanilla)</li>
+          </ul>
+          <div class="progress">
+            <div class="bar" data-percent="90"><span>90%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Back-end</h3>
+          <ul class="skills-list">
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>MySQL</li>
+          </ul>
+          <div class="progress">
+            <div class="bar" data-percent="80"><span>80%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>در حال یادگیری</h3>
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++ و Unity</li>
+          </ul>
+          <div class="progress">
+            <div class="bar" data-percent="45"><span>در حال پیشرفت</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- پروژه‌ها -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>پروژه‌ها</h2>
+        <p>چند نمونه از کارهایی که انجام داده‌ام</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-media">
+            <img src="assets/images/project1.jpg" alt="Project 2">
+          </div>
+          <div class="project-body">
+            <h3>صفحه فرود شخصی</h3>
+            <p>صفحه شخصی با طراحی مدرن و انیمیشن‌های CSS</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-cta">
+              <a href="#" class="btn-sm">جزئیات</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="project-card reveal">
+          <div class="project-media">
+            <img src="assets/images/project2.jpg" alt="Project 2">
+          </div>
+          <div class="project-body">
+            <h3>بوتیک نو | فروشگاه مد مدرن (Boutique Now)</h3>
+            <p>یک نمایش زنده (Demo) از یک فروشگاه اینترنتی مُد با تمرکز بر طراحی مینیمال، جلوه‌های بصری پیشرفته (مانند Glassmorphism و افکت‌های نئونی) و رابط کاربری واکنش‌گرا (Responsive) است.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-cta">
+              <a href="https://github.com/oktayphp/boutique-now-landing" class="btn-sm">جزئیات</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="project-card reveal future">
+          <div class="project-media placeholder">
+            <span>به‌زودی</span>
+          </div>
+          <div class="project-body">
+            <h3>سایت نمایش آنلاین انیمه </h3>
+            <p> سایت نمایش آنلاین انیمه با ui زیبا و امنیت بالا با درگاه پرداخت.</p>
+            <div class="project-tags">
+              <span>—</span>
+            </div>
+            <div class="project-cta">
+              <a href="#" class="btn-sm btn-disabled">در حال ساخت</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- مسیر یادگیری (Timeline) -->
+  <section id="learning" class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>مسیر یادگیری</h2>
+        <p>زبان‌ها و تکنولوژی‌هایی که می‌آموزم و تکامل آن‌ها</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="time">۱۴۰۰</div>
+          <div class="timeline-body">
+            <h4>شروع با HTML / CSS</h4>
+            <p>آشنایی اولیه با ساختار صفحات وب و طراحی واکنش‌گرا.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="time">۱۴۰۱</div>
+          <div class="timeline-body">
+            <h4>یادگیری JavaScript</h4>
+            <p>تعاملات صفحات، DOM و ایجاد انیمیشن‌های ساده با JS.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="time">۱۴۰۲</div>
+          <div class="timeline-body">
+            <h4>ورود به Back-end: PHP & Laravel</h4>
+            <p>ساخت api و سرویس‌های سمت سرور، کار با دیتابیس MySQL.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="time">آینده</div>
+          <div class="timeline-body">
+            <h4>Java, C++ و Unity</h4>
+            <p>گسترش توانمندی‌ها و ورود به دنیای برنامه‌نویسی سیستم و بازی‌سازی.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تماس -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 style="color:var(--tb);">تماس</h2>
+        <p>برای همکاری یا سوالات می‌توانید از طریق فرم زیر پیام بدهید</p>
+      </div>
+
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form reveal" action="contact.php" method="post" novalidate>
+          <div class="form-row">
+            <label for="name">نام</label>
+            <input type="text" id="name" name="name" required placeholder="نام شما">
+          </div>
+
+          <div class="form-row">
+            <label for="email">ایمیل</label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com">
+          </div>
+
+          <div class="form-row">
+            <label for="subject">موضوع</label>
+            <input type="text" id="subject" name="subject" placeholder="موضوع پیام">
+          </div>
+
+          <div class="form-row">
+            <label for="message">پیام</label>
+            <textarea id="message" name="message" rows="6" required placeholder="پیام خود را بنویسید..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">ارسال پیام</button>
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
+          </div>
+        </form>
+
+        <aside class="contact-info reveal">
+          <h3 style="color:var(--tb);">راه‌های تماس</h3>
+          <ul>
+            <li><strong>ایمیل:</strong> <a href="mailto:ir.oktay.a@gmail.com">ir.oktay.a@gmail.com</a></li>
+            <li><strong>ایمیل دوم:</strong> <a href="mailto:oktayphp@oktayphp.ir">oktayphp@oktayphp.ir</a></li>
+            <li><strong>تلفن:</strong> <a href="tel:+989934175939">+989934175939</a></li>
+          </ul>
+
+          <h4 style="color:var(--tb);" >شبکه‌های اجتماعی</h4>
+          <p id="m">
+            <a href="https://instagram.com/oktayphp" class="muted" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-instagram"></use></svg>Instagram</a>
+            &nbsp;&nbsp;
+            <a href="https://t.me/oktayphp" class="muted" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-telegram"></use></svg>Telegram</a>
+            <a href="https://github.com/oktayphp" class="muted" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-github"></use></svg>GitHub</a>
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- فوتر -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; <span id="year"></span> اکتای آل احمدی — oktayphp. تمامی حقوق محفوظ است.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:ir.oktay.a@gmail.com" target="_blank" rel="noopener noreferrer" class="muted"><svg class="icon"><use href="#icon-mail"></use></svg></a>
+        <a href="https://github.com/oktayphp" class="muted" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-github"></use></svg></a>
+        <a href="https://instagram.com/oktayphp" target="_blank" rel="noopener noreferrer" class="muted"><svg class="icon"><use href="#icon-instagram"></use></svg></a>
+        <a href="https://t.me/oktayphp" target="_blank" rel="noopener noreferrer" class="muted"><svg class="icon"><use href="#icon-telegram"></use></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
