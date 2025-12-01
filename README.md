@@ -91,9 +91,9 @@
 - Git
 
 ### مراحل نصب
----
-1️⃣ **کلون کردن مخزن:**
 
+1️⃣ **کلون کردن مخزن:**
+---
 ```bash
 git clone https://github.com/oktayphp/portfolio.git
 ```
@@ -121,9 +121,9 @@ php -S localhost:8000
 
 فایل‌ها را در پوشه htdocs قرار دهید
 از طریق http://localhost/portfolio دسترسی داشته باشید
----
-4️⃣ مشاهده در مرورگر:
 
+4️⃣ مشاهده در مرورگر:
+---
 http://localhost:8000
 📁 ساختار پروژه
 ```bash
