@@ -112,9 +112,11 @@ $recipient_email = 'your-email@example.com';
 
 با PHP Built-in Server:
 
+```bash
 Bash
 
 php -S localhost:8000
+```
 با XAMPP/WAMP:
 
 فایل‌ها را در پوشه htdocs قرار دهید
@@ -125,6 +127,7 @@ text
 
 http://localhost:8000
 📁 ساختار پروژه
+```bash
 text
 
 portfolio/
@@ -145,6 +148,7 @@ portfolio/
 ├── README.md                   # مستندات
 ├── .gitignore                  # فایل‌های نادیده‌گرفته شده Git
 └── LICENSE                     # مجوز پروژه
+```
 ⚙️ تنظیمات
 🎨 تغییر رنگ‌ها
 در فایل assets/css/style.css:
